@@ -1,0 +1,21 @@
+# Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.DS_Store
+
+# Data outputs (keep raw data tracked or preserved)
+data/processed/
+data/reports/
+logs/
+*.log
+
+# IDE & workspace
+.vscode/
+.idea/
+.gemini/

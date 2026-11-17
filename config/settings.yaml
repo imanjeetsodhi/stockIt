@@ -1,0 +1,30 @@
+app:
+  name: "Stackit"
+  version: "1.0.0"
+  description: "Portfolio Optimization and Investment Recommendation System"
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+  reload: false
+
+frontend:
+  port: 8501
+  api_base_url: "http://127.0.0.1:8000"
+
+financial:
+  risk_free_rate: 0.065 # 6.5% standard Indian 10-year G-Sec proxy
+  trading_days_per_year: 252
+  max_stock_weight: 0.20
+  min_stock_weight: 0.00
+  weight_threshold: 0.0001 # Clean out negligible allocations (< 0.01%)
+  min_common_history_ratio: 0.80 # Stocks must have at least 80% coverage to be included
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  reports_dir: "data/reports"
+
+logging:
+  level: "INFO"
+  log_file: "logs/stackit.log"
